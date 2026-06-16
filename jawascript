@@ -39,7 +39,6 @@ function closeCart() {
 closeCartBtn.addEventListener('click', closeCart);
 cartOverlay.addEventListener('click', closeCart);
 
-The JavaScript code improves usability by enabling dynamic interactions without requiring page reloads.
 
 
 
