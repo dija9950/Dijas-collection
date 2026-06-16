@@ -1,0 +1,55 @@
+// DOM Elements
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+const cartBtn = document.getElementById('cart-btn');
+const closeCartBtn = document.getElementById('close-cart-btn');
+const cartDrawer = document.getElementById('cart-drawer');
+const cartOverlay = document.getElementById('cart-overlay');
+const cartPanel = document.getElementById('cart-panel');
+ 
+// Mobile Menu Toggle
+mobileMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+});
+ 
+// Open Shopping Cart Drawer
+cartBtn.addEventListener('click', () => {
+    cartDrawer.classList.remove('invisible');
+ 
+    setTimeout(() => {
+        cartOverlay.classList.remove('opacity-0');
+        cartOverlay.classList.add('opacity-100');
+ 
+        cartPanel.classList.remove('translate-x-full');
+    }, 10);
+});
+ 
+// Close Shopping Cart Drawer
+function closeCart() {
+    cartOverlay.classList.remove('opacity-100');
+    cartOverlay.classList.add('opacity-0');
+ 
+    cartPanel.classList.add('translate-x-full');
+ 
+    setTimeout(() => {
+        cartDrawer.classList.add('invisible');
+    }, 300);
+}
+ 
+closeCartBtn.addEventListener('click', closeCart);
+cartOverlay.addEventListener('click', closeCart);
+
+The JavaScript code improves usability by enabling dynamic interactions without requiring page reloads.
+
+
+
+
+
+
+
+
+
+
+
+
+
